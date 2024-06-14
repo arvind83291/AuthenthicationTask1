@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend1</title>
+</head>
+
+<body>
+    <script>
+        function getInfo(){
+            const res = fetch("https://fakerapi.it/api/v1/persons") 
+            .then(function(response){
+                const json = response.json()
+                .then((fdata)=>{
+                    console.log(fdata);
+                })
+            })
+        }
+    </script>
+    <button onclick="getInfo()">Get Info</button>
+</body>
+</html>
